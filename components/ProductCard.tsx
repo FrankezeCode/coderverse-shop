@@ -1,0 +1,90 @@
+"use client";
+
+import Image from "next/image";
+import { motion } from "framer-motion";
+import type { Product } from "@/lib/products";
+import { buyUrl } from "@/lib/whatsapp";
+import { BorderBeam } from "./BorderBeam";
+import { CornerBrackets } from "./CornerBrackets";
+
+export function ProductCard({
+  product,
+  index,
+}: {
+  product: Product;
+  index: number;
+}) {
+  const isCrimson = product.variant === "crimson";
+  const borderClass = isCrimson
+    ? "border-cv-red/80"
+    : "border-white/15";
+
+  return (
+    <motion.article
+      initial={{ opacity: 0, y: 28 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-40px" }}
+      transition={{ duration: 0.55, delay: index * 0.08 }}
+    >
+      <BorderBeam variant={isCrimson ? "crimson" : "default"}>
+        <section
+          className={`relative bg-cv-black p-4 md:p-5 ${borderClass} border`}
+        >
+          <CornerBrackets color={isCrimson ? "red" : "white"} />
+
+          <figure className="relative mb-5 aspect-[4/5] overflow-hidden border border-white/10 bg-cv-surface sm:aspect-square">
+            <CornerBrackets className="left-2 top-2" />
+            <Image
+              src={product.image}
+              alt={product.name}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </figure>
+
+          <p className="mb-2 font-mono text-[10px] uppercase tracking-wider text-cv-red md:text-xs">
+            {product.tag}
+            {product.tag.includes("SHADE") && (
+              <span
+                className="ml-1 inline-block h-3 w-2 bg-cv-red align-middle animate-cursor-blink"
+                aria-hidden
+              />
+            )}
+          </p>
+
+          <h3 className="font-display text-2xl font-black uppercase leading-tight tracking-tight text-white md:text-3xl">
+            {product.name}
+          </h3>
+
+          <p className="mt-3 font-sans text-sm leading-relaxed text-cv-muted">
+            {product.description}
+          </p>
+
+          <footer className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <p className="font-mono text-xl text-white md:text-2xl">
+              {product.price}
+            </p>
+            <a
+              href={buyUrl(product.name)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-w-[140px] items-center justify-center border border-white px-4 py-3 font-mono text-[10px] font-medium uppercase tracking-wide text-white transition-colors hover:bg-white hover:text-black sm:min-w-[160px] md:text-xs"
+            >
+              <span className="hidden text-center leading-tight sm:block">
+                I LOVE THIS — BUY →
+              </span>
+              <span className="text-center leading-tight sm:hidden">
+                I LOVE
+                <br />
+                THIS —
+                <br />
+                BUY →
+              </span>
+            </a>
+          </footer>
+        </section>
+      </BorderBeam>
+    </motion.article>
+  );
+}
