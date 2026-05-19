@@ -1,3 +1,6 @@
+import { imagesForStage, type PriceStageFolder } from "./generated/product-images";
+import type { PriceStageId } from "./price-stages";
+
 export type ProductVariant = "default" | "crimson";
 
 export interface Product {
@@ -6,8 +9,13 @@ export interface Product {
   tag: string;
   description: string;
   price: string;
-  image: string;
+  priceStage: PriceStageId;
+  images: string[];
   variant?: ProductVariant;
+}
+
+function stageImages(stage: PriceStageFolder): string[] {
+  return imagesForStage(stage);
 }
 
 export const products: Product[] = [
@@ -18,8 +26,8 @@ export const products: Product[] = [
     description:
       "High-density crimson pigment engineered for single-stroke execution. The formula binds at a molecular level for 24-hour non-volatile wear.",
     price: "$34.00",
-    image:
-      "https://images.unsplash.com/photo-1586495777744-4413d210d961?w=800&q=80",
+    priceStage: "34",
+    images: stageImages("34"),
   },
   {
     id: "algorithm-edp",
@@ -28,8 +36,8 @@ export const products: Product[] = [
     description:
       "A complex olfactory structure. Top notes of bergamot compile into a deep, sensual baseline of dark amber and midnight jasmine. Sillage optimized.",
     price: "$120.00",
-    image:
-      "https://images.unsplash.com/photo-1541643600914-78b084683601?w=800&q=80",
+    priceStage: "120",
+    images: stageImages("120"),
   },
   {
     id: "syntax-illuminator",
@@ -38,8 +46,8 @@ export const products: Product[] = [
     description:
       "Micro-fine light-reflecting particles suspended in a weightless gel matrix. Grants targeted structural definition and high-wattage radiance.",
     price: "$42.00",
-    image:
-      "https://images.unsplash.com/photo-1596462502278-27bfdd403348?w=800&q=80",
+    priceStage: "42",
+    images: stageImages("42"),
     variant: "crimson",
   },
   {
@@ -49,7 +57,7 @@ export const products: Product[] = [
     description:
       "Bypass the dermal firewall. Concentrated hyaluronic acid and peptide complex penetrate deepest layers for total cellular reboot and hydration.",
     price: "$65.00",
-    image:
-      "https://images.unsplash.com/photo-1620916564550-8b108f1470d2?w=800&q=80",
+    priceStage: "65",
+    images: stageImages("65"),
   },
 ];

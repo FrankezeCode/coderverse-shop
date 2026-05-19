@@ -1,11 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
 import type { Product } from "@/lib/products";
 import { buyUrl } from "@/lib/whatsapp";
 import { BorderBeam } from "./BorderBeam";
 import { CornerBrackets } from "./CornerBrackets";
+import { RotatingImage } from "./RotatingImage";
 
 export function ProductCard({
   product,
@@ -34,13 +34,7 @@ export function ProductCard({
 
           <figure className="relative mb-5 aspect-[4/5] overflow-hidden border border-white/10 bg-cv-surface sm:aspect-square">
             <CornerBrackets className="left-2 top-2" />
-            <Image
-              src={product.image}
-              alt={product.name}
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
+            <RotatingImage sources={product.images} alt={product.name} />
           </figure>
 
           <p className="mb-2 font-mono text-[10px] uppercase tracking-wider text-cv-red md:text-xs">
