@@ -17,11 +17,11 @@ export function SiteHeader() {
         <aside className="hidden text-right font-mono text-[10px] leading-relaxed text-cv-muted sm:block md:text-xs">
           <p>
             <span className="text-cv-red">SERVER:</span>{" "}
-            <span className="text-white">BEAUTY_CORE_ACTV</span>
+            <span className="text-white">LATENCY</span>
           </p>
           <p>
-            <span className="text-cv-red">LATENCY:</span>{" "}
-            <span className="text-white">12MS // STABLE</span>
+            <span className="text-cv-red">HAPPINESS: STABLE</span>{" "}
+            <span className="text-white">100% // SELF-ACCEPTANCE</span>
           </p>
         </aside>
       </section>

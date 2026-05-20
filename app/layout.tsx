@@ -19,9 +19,12 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "CODERVERSE — Engineered Cosmetics",
+  title: "CODERVERSE SHOP",
   description:
-    "Engineered cosmetics for the modern runtime. Precision application. Absolute execution.",
+    "Shop for the best products from the best brands in the world.",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({

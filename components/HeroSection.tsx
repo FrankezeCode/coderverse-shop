@@ -22,10 +22,10 @@ export function HeroSection() {
           className="font-display text-[clamp(3.5rem,14vw,9rem)] font-black uppercase leading-[0.85] tracking-tight text-white"
         >
           <span className="block drop-shadow-[0_0_40px_rgba(255,255,255,0.15)]">
-            COMPILE
+            FEELING
           </span>
-          <span className="text-grid-outline mt-1 block">FLAWLESS</span>
-          <span className="mt-1 block">SYNTAX</span>
+          <span className="text-grid-outline mt-1 block">GOOD</span>
+          <span className="mt-1 block">MATTERS</span>
         </motion.h1>
 
         <motion.section
@@ -35,9 +35,10 @@ export function HeroSection() {
           className="mt-12 max-w-xl border-l-2 border-cv-red pl-5 md:mt-16 md:pl-6"
         >
           <p className="font-sans text-sm leading-relaxed text-cv-muted md:text-base">
-            Engineered cosmetics for the modern runtime. We extract soft,
-            feminine impact from rigorous, high-performance formulas. Precision
-            application. Absolute execution.
+          The right fragrance does more than smell beautiful.
+          It lifts your mood.
+          Boosts your confidence.
+          And reminds you to enjoy yourself a little more every day.
           </p>
         </motion.section>
       </article>
