@@ -12,7 +12,7 @@ export function ArsenalSection() {
             THE ARSENAL
           </h2>
           <p className="font-mono text-[10px] leading-snug text-cv-green md:text-xs">
-            [ {String(products.length).padStart(2, "0")} ACTIVE MODULES
+            [ {String(products.length).padStart(2, "0")} ACTIVE FRAGRANCES
             <br className="sm:hidden" /> DETECTED ]
           </p>
         </section>

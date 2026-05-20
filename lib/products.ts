@@ -24,7 +24,7 @@ export const products: Product[] = [
     name: "HEX_CODE MATTE LIP",
     tag: "OBJ.LIPSTICK // SHADE: FATAL_ERR",
     description:
-      "High-density crimson pigment engineered for single-stroke execution. The formula binds at a molecular level for 24-hour non-volatile wear.",
+      "Simple, modern, and effortlessly elegant — a clean fragrance that feels soft, fresh, and naturally beautiful.",
     price: "$34.00",
     priceStage: "34",
     images: stageImages("34"),
@@ -34,7 +34,7 @@ export const products: Product[] = [
     name: "ALGORITHM EDP",
     tag: "[SYSTEM] EAU_DE_PARFUM",
     description:
-      "A complex olfactory structure. Top notes of bergamot compile into a deep, sensual baseline of dark amber and midnight jasmine. Sillage optimized.",
+      "A deep, magnetic fragrance crafted for moments when confidence speaks before words do.",
     price: "$120.00",
     priceStage: "120",
     images: stageImages("120"),
@@ -44,7 +44,7 @@ export const products: Product[] = [
     name: "SYNTAX ILLUMINATOR",
     tag: "OBJ.HIGHLIGHT // MODE: RADIANCE",
     description:
-      "Micro-fine light-reflecting particles suspended in a weightless gel matrix. Grants targeted structural definition and high-wattage radiance.",
+      "A comforting scent that gently lifts your mood, calms your mind, and brings quiet confidence to every moment.",
     price: "$42.00",
     priceStage: "42",
     images: stageImages("42"),
@@ -55,7 +55,7 @@ export const products: Product[] = [
     name: "ROOT ACCESS SERUM",
     tag: "SUDO CHMOD 777 SERUM",
     description:
-      "Bypass the dermal firewall. Concentrated hyaluronic acid and peptide complex penetrate deepest layers for total cellular reboot and hydration.",
+      "Simple, modern, and effortlessly elegant — a clean fragrance that feels soft, fresh, and naturally beautiful.",
     price: "$65.00",
     priceStage: "65",
     images: stageImages("65"),
