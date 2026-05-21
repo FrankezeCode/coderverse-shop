@@ -4,25 +4,25 @@ export const PRICE_STAGES = [
     id: "34",
     label: "$34",
     folder: "34",
-    productId: "hex-code-matte-lip",
+    productId: "auralis",
   },
   {
     id: "42",
     label: "$42",
     folder: "42",
-    productId: "syntax-illuminator",
+    productId: "veloura",
   },
   {
     id: "65",
     label: "$65",
     folder: "65",
-    productId: "root-access-serum",
+    productId: "lumera",
   },
   {
     id: "120",
     label: "$120",
     folder: "120",
-    productId: "algorithm-edp",
+    productId: "solenne",
   },
 ] as const;
 

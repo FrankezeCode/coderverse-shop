@@ -4,12 +4,12 @@ Images are picked up automatically from each folder. Run `npm run generate:image
 
 ## Folders
 
-| Folder | Price   | Product              |
-|--------|---------|----------------------|
-| `34/`  | $34.00  | HEX_CODE MATTE LIP   |
-| `42/`  | $42.00  | SYNTAX ILLUMINATOR   |
-| `65/`  | $65.00  | ROOT ACCESS SERUM    |
-| `120/` | $120.00 | ALGORITHM EDP        |
+| Folder | Price   | Product  |
+|--------|---------|----------|
+| `34/`  | $34.00  | Auralis  |
+| `42/`  | $42.00  | Veloura  |
+| `65/`  | $65.00  | Lumèra   |
+| `120/` | $120.00 | Solenne  |
 
 ## Filenames
 

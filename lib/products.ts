@@ -20,44 +20,44 @@ function stageImages(stage: PriceStageFolder): string[] {
 
 export const products: Product[] = [
   {
-    id: "hex-code-matte-lip",
-    name: "HEX_CODE MATTE LIP",
-    tag: "OBJ.LIPSTICK // SHADE: FATAL_ERR",
+    id: "lumera",
+    name: "Lumèra",
+    tag: "CALM · COMFORTING",
     description:
-      "Simple, modern, and effortlessly elegant — a clean fragrance that feels soft, fresh, and naturally beautiful.",
+      "A comforting scent that gently lifts your mood, calms your mind, and brings quiet confidence to every moment.",
+    price: "$65.00",
+    priceStage: "65",
+    images: stageImages("65"),
+  },
+  {
+    id: "auralis",
+    name: "Auralis",
+    tag: "RADIANT · ELEGANT",
+    description:
+      "Soft, radiant, and effortlessly elegant — designed for everyday confidence and beautiful presence.",
     price: "$34.00",
     priceStage: "34",
     images: stageImages("34"),
   },
   {
-    id: "algorithm-edp",
-    name: "ALGORITHM EDP",
-    tag: "[SYSTEM] EAU_DE_PARFUM",
+    id: "veloura",
+    name: "Veloura",
+    tag: "WARM · GRACEFUL",
     description:
-      "A deep, magnetic fragrance crafted for moments when confidence speaks before words do.",
-    price: "$120.00",
-    priceStage: "120",
-    images: stageImages("120"),
-  },
-  {
-    id: "syntax-illuminator",
-    name: "SYNTAX ILLUMINATOR",
-    tag: "OBJ.HIGHLIGHT // MODE: RADIANCE",
-    description:
-      "A comforting scent that gently lifts your mood, calms your mind, and brings quiet confidence to every moment.",
+      "A warm refined fragrance that feels comforting, graceful, and quietly unforgettable.",
     price: "$42.00",
     priceStage: "42",
     images: stageImages("42"),
     variant: "crimson",
   },
   {
-    id: "root-access-serum",
-    name: "ROOT ACCESS SERUM",
-    tag: "SUDO CHMOD 777 SERUM",
+    id: "solenne",
+    name: "Solenne",
+    tag: "LUMINOUS · UPLIFTING",
     description:
-      "Simple, modern, and effortlessly elegant — a clean fragrance that feels soft, fresh, and naturally beautiful.",
-    price: "$65.00",
-    priceStage: "65",
-    images: stageImages("65"),
+      "A luminous fragrance created to inspire joy, softness, and the kind of confidence that feels natural and effortless.",
+    price: "$120.00",
+    priceStage: "120",
+    images: stageImages("120"),
   },
 ];
