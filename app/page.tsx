@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <BackgroundScene />
-      <main className="relative z-10">
+      <main id="top" className="relative z-10">
         <SiteHeader />
         <HeroSection />
         <ArsenalSection />
