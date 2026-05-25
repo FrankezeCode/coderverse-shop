@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import type { Product } from "@/lib/products";
 import { buyUrl } from "@/lib/whatsapp";
@@ -14,10 +15,7 @@ export function ProductCard({
   product: Product;
   index: number;
 }) {
-  const isCrimson = product.variant === "crimson";
-  const borderClass = isCrimson
-    ? "border-cv-red/80"
-    : "border-white/15";
+  const [paused, setPaused] = useState(false);
 
   return (
     <motion.article
@@ -25,16 +23,27 @@ export function ProductCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.55, delay: index * 0.08 }}
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+      onFocus={() => setPaused(true)}
+      onBlur={() => setPaused(false)}
     >
-      <BorderBeam variant={isCrimson ? "crimson" : "default"}>
+      <BorderBeam active={paused}>
         <section
-          className={`relative bg-cv-black p-4 md:p-5 ${borderClass} border`}
+          className={`relative border bg-cv-black p-4 transition-colors duration-300 md:p-5 ${
+            paused ? "border-cv-red/90" : "border-white/15"
+          }`}
         >
-          <CornerBrackets color={isCrimson ? "red" : "white"} />
+          <CornerBrackets color={paused ? "red" : "white"} />
 
           <figure className="relative mb-5 aspect-[4/5] overflow-hidden border border-white/10 bg-cv-surface sm:aspect-square">
-            <CornerBrackets className="left-2 top-2" />
-            <RotatingImage sources={product.images} alt={product.name} />
+            <CornerBrackets className="left-2 top-2" color={paused ? "red" : "white"} />
+            <RotatingImage
+              sources={product.images}
+              alt={product.name}
+              paused={paused}
+              transitionOffset={index}
+            />
           </figure>
 
           <p className="mb-2 font-mono text-[10px] uppercase tracking-wider text-cv-red md:text-xs">

@@ -1,8 +1,6 @@
 import { imagesForStage, type PriceStageFolder } from "./generated/product-images";
 import type { PriceStageId } from "./price-stages";
 
-export type ProductVariant = "default" | "crimson";
-
 export interface Product {
   id: string;
   name: string;
@@ -11,7 +9,6 @@ export interface Product {
   price: string;
   priceStage: PriceStageId;
   images: string[];
-  variant?: ProductVariant;
 }
 
 function stageImages(stage: PriceStageFolder): string[] {
@@ -48,7 +45,6 @@ export const products: Product[] = [
     price: "$42.00",
     priceStage: "42",
     images: stageImages("42"),
-    variant: "crimson",
   },
   {
     id: "solenne",
