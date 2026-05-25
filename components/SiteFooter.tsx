@@ -1,14 +1,21 @@
 import Link from "next/link";
 import { FOOTER, shareIdeaWhatsAppUrl } from "@/lib/footer";
+import { FooterBrandLockup } from "./footer/FooterBrandLockup";
 import { FooterNewsletter } from "./footer/FooterNewsletter";
 import { FooterPoweredBy } from "./footer/FooterPoweredBy";
+
+type FooterLink = {
+  label: string;
+  href: string;
+  comingSoon?: boolean;
+};
 
 function FooterLinkColumn({
   title,
   links,
 }: {
   title: string;
-  links: readonly { label: string; href: string }[];
+  links: readonly FooterLink[];
 }) {
   return (
     <div>
@@ -18,12 +25,22 @@ function FooterLinkColumn({
       <ul className="flex flex-col gap-2.5">
         {links.map((link) => (
           <li key={link.label}>
-            <Link
-              href={link.href}
-              className="font-sans text-sm text-white/80 transition-colors hover:text-white"
-            >
-              {link.label}
-            </Link>
+            {link.comingSoon ? (
+              <span className="font-sans text-sm text-white/80">
+                {link.label}
+                <span className="font-normal text-white/30">
+                  {" "}
+                  (coming soon)
+                </span>
+              </span>
+            ) : (
+              <Link
+                href={link.href}
+                className="font-sans text-sm text-white/80 transition-colors hover:text-white"
+              >
+                {link.label}
+              </Link>
+            )}
           </li>
         ))}
       </ul>
@@ -43,22 +60,19 @@ export function SiteFooter() {
       />
 
       <div className="relative mx-auto max-w-7xl px-4 py-16 md:px-8 md:py-20">
-        {/* Main grid */}
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-10">
-          {/* Brand */}
           <div className="lg:col-span-4">
-            <Link href="#top" className="inline-flex items-center gap-2">
-              <span className="h-2.5 w-2.5 bg-cv-red" aria-hidden />
-              <span className="font-display text-xl font-black uppercase tracking-tight text-white">
-                {FOOTER.brand.name}
-              </span>
-            </Link>
-            <p className="mt-4 max-w-xs font-sans text-sm leading-relaxed text-cv-muted">
-              {FOOTER.brand.tagline}
-            </p>
+            <FooterBrandLockup />
+            <div className="mt-4 max-w-sm space-y-2">
+              <p className="font-sans text-sm font-semibold leading-snug text-white">
+                {FOOTER.brand.taglineTitle}
+              </p>
+              <p className="font-sans text-sm leading-relaxed text-cv-muted">
+                {FOOTER.brand.taglineSubtitle}
+              </p>
+            </div>
           </div>
 
-          {/* Quick links */}
           <div className="grid grid-cols-2 gap-8 sm:gap-12 lg:col-span-4">
             <FooterLinkColumn
               title={FOOTER.explore.title}
@@ -70,13 +84,11 @@ export function SiteFooter() {
             />
           </div>
 
-          {/* Newsletter */}
           <div className="lg:col-span-4">
             <FooterNewsletter />
           </div>
         </div>
 
-        {/* Idea CTA */}
         <section className="mt-14 rounded-sm border border-white/10 bg-cv-surface/40 px-6 py-8 backdrop-blur-sm md:px-10 md:py-10">
           <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
             <div className="max-w-xl">
@@ -108,14 +120,12 @@ export function SiteFooter() {
           </div>
         </section>
 
-        {/* Emotional line */}
         <p className="mt-12 text-center font-sans text-sm italic tracking-wide text-white/50">
           {FOOTER.brand.emotionalLine}
         </p>
 
         <FooterPoweredBy />
 
-        {/* Copyright */}
         <p className="mt-8 text-center font-mono text-[10px] text-cv-muted/60">
           {FOOTER.copyright}
         </p>

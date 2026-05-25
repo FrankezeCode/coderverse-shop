@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Archivo_Black, Inter, JetBrains_Mono } from "next/font/google";
+import { Archivo_Black, Inter, JetBrains_Mono, Orbitron } from "next/font/google";
 import "./globals.css";
 
 const archivo = Archivo_Black({
@@ -16,6 +16,12 @@ const inter = Inter({
 const jetbrains = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-jetbrains",
+});
+
+const orbitron = Orbitron({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-orbitron",
 });
 
 export const metadata: Metadata = {
@@ -35,7 +41,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${archivo.variable} ${inter.variable} ${jetbrains.variable}`}
+      className={`${archivo.variable} ${inter.variable} ${jetbrains.variable} ${orbitron.variable}`}
     >
       <body className="min-h-screen overflow-x-hidden">{children}</body>
     </html>

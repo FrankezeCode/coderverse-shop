@@ -24,7 +24,9 @@ export function HeroSection() {
           <span className="block drop-shadow-[0_0_40px_rgba(255,255,255,0.15)]">
             FEELING
           </span>
-          <span className="text-grid-outline mt-1 block">GOOD</span>
+          <span className="text-grid-outline mt-1 block tracking-[0.35em] md:tracking-[0.45em]">
+            GOOD
+          </span>
           <span className="mt-1 block">MATTERS</span>
         </motion.h1>
 

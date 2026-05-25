@@ -1,25 +1,27 @@
 export const FOOTER = {
   brand: {
     name: "CODERVERSE",
-    tagline:
-      "Fragrance designed to bring confidence, joy, and beautiful everyday moments.",
+    taglineTitle:
+      "Building software and digital experiences that matter.",
+    taglineSubtitle:
+      "Delivering technology services and digital commerce solutions for modern businesses.",
     emotionalLine: "Designed to make confidence feel beautiful.",
   },
   explore: {
     title: "Explore",
     links: [
-      { label: "Shop Fragrances", href: "#arsenal" },
-      { label: "New Arrivals", href: "#arsenal" },
-      { label: "Best Sellers", href: "#arsenal" },
-      { label: "Gift Collection", href: "#arsenal" },
+      { label: "Shop Frangrances", href: "/#arsenal" },
+      { label: "Shop Softwares", href: "/software" },
+      { label: "Shop wears", href: "#", comingSoon: true },
+      { label: "Best sellers", href: "/#arsenal" },
     ],
   },
   company: {
     title: "Company",
     links: [
-      { label: "About Us", href: "#top" },
-      { label: "Contact", href: "#contact" },
-      { label: "Shipping & Returns", href: "#contact" },
+      { label: "About Us", href: "/about" },
+      { label: "Contact", href: "/contact" },
+      { label: "Shipping & Returns", href: "/shipping-returns" },
       { label: "Privacy Policy", href: "/privacy" },
     ],
   },

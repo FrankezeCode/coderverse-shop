@@ -1,30 +1,24 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+import { CompanyPageShell } from "@/components/company/CompanyPageShell";
+import { CompanyPageSections } from "@/components/company/CompanyPageSections";
+import { privacyPage } from "@/lib/company-pages";
 
-export const metadata = {
-  title: "Privacy Policy — Coderverse",
+export const metadata: Metadata = {
+  title: `${privacyPage.title} — Coderverse`,
+  description: privacyPage.description,
 };
 
 export default function PrivacyPage() {
   return (
-    <main className="relative z-10 mx-auto max-w-2xl px-4 py-20 md:px-8">
-      <Link
-        href="/"
-        className="font-mono text-xs text-cv-muted transition-colors hover:text-white"
-      >
-        ← Back to shop
-      </Link>
-      <h1 className="mt-8 font-display text-3xl font-black uppercase text-white">
-        Privacy Policy
-      </h1>
-      <p className="mt-6 font-sans text-sm leading-relaxed text-cv-muted">
-        We respect your privacy. Information you share (such as email for our
-        newsletter or messages via WhatsApp) is used only to communicate with you
-        about products, orders, and updates. We do not sell your data to third
-        parties.
+    <CompanyPageShell title={privacyPage.title}>
+      <CompanyPageSections sections={privacyPage.sections} />
+      <p className="mt-8 font-sans text-sm text-cv-muted">
+        <Link href="/contact" className="text-white underline-offset-2 hover:underline">
+          Contact us
+        </Link>{" "}
+        about privacy requests.
       </p>
-      <p className="mt-4 font-sans text-sm leading-relaxed text-cv-muted">
-        For questions, contact us through the channels listed on our shop page.
-      </p>
-    </main>
+    </CompanyPageShell>
   );
 }

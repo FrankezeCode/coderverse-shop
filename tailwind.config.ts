@@ -11,6 +11,8 @@ const config: Config = {
       colors: {
         cv: {
           black: "#000000",
+          brand: "#1c144d",
+          "brand-deep": "#141038",
           surface: "#080808",
           red: "#E21D1D",
           "red-bright": "#FF3B3B",
@@ -23,6 +25,7 @@ const config: Config = {
         display: ["var(--font-archivo)", "system-ui", "sans-serif"],
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
         mono: ["var(--font-jetbrains)", "ui-monospace", "monospace"],
+        tech: ["var(--font-orbitron)", "var(--font-jetbrains)", "ui-monospace", "monospace"],
       },
       animation: {
         "cursor-blink": "cursor-blink 1s step-end infinite",
