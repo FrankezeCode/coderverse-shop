@@ -115,7 +115,7 @@ export function HeaderUniversalCode() {
 
   return (
     <p
-      className="mx-auto w-full min-h-[2.5rem] max-w-md border-t border-white/5 pt-2.5 text-center font-mono text-[9px] leading-snug tracking-wide text-balance [grid-area:tagline] sm:min-h-[2.25rem] sm:text-[10px] md:min-h-0 md:max-w-none md:justify-self-center md:border-0 md:pt-0 md:text-xs"
+      className="max-w-[11.5rem] justify-self-end text-right font-mono text-[8px] leading-snug tracking-wide [grid-area:status] sm:max-w-[12.5rem] sm:text-[9px] md:mx-auto md:max-w-none md:justify-self-center md:text-center md:text-xs md:[grid-area:tagline]"
       aria-hidden={!reducedMotion}
     >
       <span
