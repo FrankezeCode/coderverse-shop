@@ -25,7 +25,7 @@ export function SiteHeader() {
           </p>
           <p>
             <span className="text-cv-red">LATENCY:</span>{" "}
-            <span className="text-white">100% // SELF-ACCEPTANCE</span>
+            <span className="text-white">100% SELF-ACCEPTANCE</span>
           </p>
         </aside>
 
