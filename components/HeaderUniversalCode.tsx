@@ -46,16 +46,16 @@ export function HeaderUniversalCode() {
   const [phase, setPhase] = useState<Phase>("typing");
   const [charIndex, setCharIndex] = useState(0);
   const [reducedMotion, setReducedMotion] = useState(false);
-  const timers = useRef<ReturnType<typeof setTimeout>[]>();
+  const timers = useRef<ReturnType<typeof setTimeout>[]>([]);
 
   const clearTimers = useCallback(() => {
-    timers.current?.forEach(clearTimeout);
+    timers.current.forEach(clearTimeout);
     timers.current = [];
   }, []);
 
   const schedule = useCallback((fn: () => void, ms: number) => {
     const id = setTimeout(fn, ms);
-    timers.current = [...(timers.current ?? []), id];
+    timers.current = [...timers.current, id];
   }, []);
 
   useEffect(() => {
